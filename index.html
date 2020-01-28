@@ -1,0 +1,105 @@
+<html>
+
+<head>itle>DBA Oracle</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">OracleDBA</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div><!-- /.container -->
+        </nav>
+        <div class="row" style="margin-top: 60px;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1 class="text-center">Base de conhecimento</h1>
+            </div>
+        </div>
+
+        <ul class="nav nav-pills" style="margin-bottom: 10px;">
+            <li class="active">
+                <a href="#1a" style="margin-left: -15px;" data-toggle="tab">AIX</a>
+            </li>
+            <li><a href="#2a" data-toggle="tab">Oracle</a>
+            </li>
+        </ul>
+
+        <div class="tab-content clearfix">
+            <div class="tab-pane active"  id="1a">
+                <div class="row">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#collapse1">Open alert AIX</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <h3 class="text-center">Fora do Sqlplus</h3>
+                                    <ul>
+                                        <li>SHOW PARAMETER DUMP</li>
+                                        <li>PEGAR O DEST NA TABELA</li>
+                                        <li>SELECT * FROM V$PARAMETER WHERE NAME LIKE '%dump%'</li>
+                                        <li>ACESSAR O ENDERECO DA V$PARAMETER - background_dump_dest</li>
+                                        <li>tail -f alert_orcl.log</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="2a">
+                <div class="row">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#collapse2">Create user or role</a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>CREATE ROLE NOME_ROLE IDENTIFIED BY SENHA;</li>
+                                        <li>GRANT CONNECT TO NOME_ROLE;</li>
+                                        <li>GRANT CREATE SESSION TO NOME_ROLE;</li>
+                                        <li>GRANT SELECT ANY TABLE TO NOME_ROLE;</li>
+                                        <li>CREATE USER NOME_USER IDENTIFIED BY SENHA;</li>
+                                        <li>GRANT NOME_ROLE TO NOME_USER;</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
